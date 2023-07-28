@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+   
+        <img src="{{ url_for('static', filename='logo_a3tech-1.png') }}">
+
+        <nav>
+
+<ul>
+
+        <li class="selecionado" id="dolar" onClick="tabelaVMS()" >        
+        Vms</li>
+        <li   onClick="tabelaDisco()"      >Espaço em C</li></ul>  
+        </nav>
+    </header>
+<main>
+    <div id="relatorio"></div>
+</main>
+</body>
+
+<script  src="{{ url_for('static', filename='index.js') }}">
+    </script>
+
+
+
+</html>
