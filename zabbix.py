@@ -4,7 +4,7 @@ def busca_item_por_key(zapi, chave):
 
 
     tabela_esperada=["lastvalue","hostid","lastclock","itemid","name"]
-    itens_com_key= zapi.item.get(output=  tabela_esperada ,   sortfield	= "lastvalue",     search= {"key_": chave})
+    itens_com_key= zapi.item.get(output=  tabela_esperada ,       search= {"key_": chave})
     hosts = zapi.host.get(output=["hostid", "name"])
 
 
@@ -102,15 +102,5 @@ def xx():
   filtro=lambda x : x["itemid"] ==  item
   filtro_tabela=lambda x : x["itemid"] ==  item
   busca_no_historico = list(filter(filtro, historico_da_key))
-
-
-
-
-
-
-
-
-
-
 
 
